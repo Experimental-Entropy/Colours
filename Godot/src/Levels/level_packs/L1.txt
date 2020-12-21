@@ -1,0 +1,6 @@
+# CYAN = C, MAGENTA = M, YELLOW = Y, RED = R, GREEN = G, BLUE = U, WHITE = W, BLACK = B.
+# Show the location of a block with the syntax: x,y where 0,0 is the to left. [DO NOT PUT SPACES AROUND THE NUMBER]
+# To code for a block do this: "C: 11,3" <= This signals a CYAN block at the coords 11, 3.
+# Begin lines with a "#" to comment out the line (do not write anything else on the line).
+# Don't leave blank lines. (use a # instead)
+
