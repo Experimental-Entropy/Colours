@@ -20,6 +20,8 @@ func setup_blocks(dims: Vector2, path_to_unpack: String) -> Array:
 		var coords: = Vector2(0, 0)
 		var comma: = 0
 		
+		# Change up this system to work for TWO LETTER combos for ins, outs, goals, etc.
+		
 		if line[0] != "#":
 			
 			if line[0] == "C":
