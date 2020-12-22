@@ -1,7 +1,7 @@
 extends Node
 class_name Manager
 
-func setup_blocks(dims: Vector2, path_to_unpack: String) -> Array:
+func unpack(dims: Vector2, path_to_unpack: String) -> Array:
 	
 	var file = File.new()
 	file.open(file, file.READ)
