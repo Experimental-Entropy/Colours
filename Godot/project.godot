@@ -23,6 +23,18 @@ _global_script_class_icons={
 config/name="Colours"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=512
+window/size/height=288
+
+[global]
+
+name=false
+
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
