@@ -17,49 +17,38 @@ func unpack(dims: Vector2, path_to_unpack: String) -> Array:
 		
 		var line = file.get_line()
 		line += " "
-		var coords: = Vector2(0, 0)
-		var comma: = 0
-		
-		# Change up this system to work for TWO LETTER combos for ins, outs, goals, etc.
 		
 		if line[0] != "#":
 			
-			if line[0] == "C":
-				
-				if line[4] == ",":
-					coords.x = int(line[4])
-					comma = 4
-				elif line[5] == ",":
-					coords.x = int(line[4] + line[5])
-					comma = 5
-				else:
-					print_debug("Warning when importing level file: '" + line + "'")
-				
-				if line[comma + 2] == " ":
-					coords.y = int(line[comma + 1])
-				elif line[comma + 3] == " ":
-					coords.y = int(line[comma + 1] + line[comma + 2])
-				else:
-					print_debug("Warning when importing level file: '" + line + "'")
-				
-			elif line[0] == "M":
-				pass
-			elif line[0] == "Y":
-				pass
-			elif line[0] == "R":
-				pass
+			var type = ""
+			if line[0] == "B":
+				type = "Block"
 			elif line[0] == "G":
-				pass
-			elif line[0] == "U":
-				pass
-			elif line[0] == "W":
-				pass
-			elif line[0] == "B":
-				pass
+				type = "Goal"
+			elif line[0] == "C":
+				type = "Conveyor"
+			elif line[0] == "I":
+				type = "Input"
+			elif line[0] == "O":
+				type = "Output"
+			elif line[0] == "L":
+				type = "Linked"
 			else:
-				print_debug("Warning when importing level file: " + line)
+				print_debug("Item Type not as expected in line: " + str(line_number) + " - " + line)
+			
+			var property = ""
+			if type != "Output":
+				property = line[2]
+			
+			var coords = Vector2(0,0)
+			if type == "Output":
+				coords.x = int(line.substr(2,2))
+				coords.y = int(line.substr(4,2))
+			else:
+				coords.x = int(line.substr(2,2))
+				coords.y = int(line.substr(4,2))
 		
 		
 		line_number += 1
 	
-	return []
+	return block_map
