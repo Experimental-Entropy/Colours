@@ -1,6 +1,22 @@
-# CYAN = C, MAGENTA = M, YELLOW = Y, RED = R, GREEN = G, BLUE = U, WHITE = W, BLACK = B.
-# Show the location of a block with the syntax: x,y where 0,0 is the to left. [DO NOT PUT SPACES AROUND THE NUMBER]
-# To code for a block do this: "C: 11,3" <= This signals a CYAN block at the coords 11, 3.
-# Begin lines with a "#" to comment out the line (do not write anything else on the line).
-# Don't leave blank lines. (use a # instead)
+DIMS-16-09
+Example Level
+# First line MUST be the dimensions of the level (remember: 0,0 is a point so coords only go up to 15,8 if the level is 16x9)
+# Second line MUST be the name of the level (can just be L1-1 or whatever)
 
+# A real block - It's blue - Coords: 0,0
+B-BU-00-00
+
+# A Goal position - It's Cyan - Coords: 15,8
+G-CY-15-08
+
+# A conveyor - It's facing left (as in it pushes blocks to the left)
+C-LE-02-02
+
+# An input - It's ID is 3
+I-03-04-02
+
+# An output - These don't need IDs - Coords: 6,2
+O-06-02
+
+# A linked block (to an input) - It's Black - Coords: 8,2 - ID of linked Input
+L-BL-08-02-03
