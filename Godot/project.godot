@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Manager",
 "language": "GDScript",
-"path": "res://src/Management/Manager.gd"
+"path": "res://src/Management/File.gd"
 } ]
 _global_script_class_icons={
 "Manager": ""
